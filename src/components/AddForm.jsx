@@ -40,15 +40,15 @@ function AddForm(props) {
     // stateClone.push(newProduct)
     // props.setAllProducts(stateClone)
 
-    // props.setAllProducts((currentStateValue) => {
-    //   console.log(currentStateValue)
-    //   const stateClone = structuredClone(currentStateValue)
-    //   stateClone.push(newProduct)
-    //   // return what we want the new value of the state to be
-    //   return stateClone
-    // })
+    props.setAllProducts((currentStateValue) => {
+      console.log(currentStateValue)
+      const stateClone = structuredClone(currentStateValue)
+      stateClone.push(newProduct)
+      // return what we want the new value of the state to be
+      return stateClone
+    })
 
-    props.setAllProducts((state) => [...state, newProduct])
+    // props.setAllProducts((state) => [...state, newProduct])
 
     // refresh the values of the inputs
     setNameValue("")
